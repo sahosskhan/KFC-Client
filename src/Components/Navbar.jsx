@@ -51,7 +51,24 @@ const Navbar = () => {
                   )}
         </div>
       </label>
-      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+      <ul tabIndex={0} className="menu bg-opacity-75 menu-sm dropdown-content mt-5 z-[1] p-2 shadow bg-base-100 rounded-box w-72">
+
+      <a href="#" className="flex items-center p-3 -mt-2">
+                     {user ? (
+                    <img className=" flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9" src={user.photoURL} />
+                  ) : (
+                    <img className=" hidden flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9" src="" alt="" />
+                  )}
+                    <div className="mx-1">
+                      {user ? (
+                        <h1 className="text-lg font-light dark:text-white text-black">
+                          {user.displayName}
+                        </h1>
+                      ) : (
+                        <h1 className="text-sm font-semibold dark:text-white text-black"></h1>
+                      )}
+                    </div>
+                  </a>
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Added Food</a></li>
         <li className="hover:bg-red-500 rounded-xl font-bold  text-3xl"><a>Add Food</a></li>
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Ordered Food</a></li>

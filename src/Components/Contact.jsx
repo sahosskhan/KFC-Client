@@ -16,7 +16,7 @@ const Contact = () => {
                     <i className="text-xl fa-solid fa-map-location-dot"></i>
 
                         <span className="mx-2 mt-1 text-black w-72">
-                        Plot-02, Road-3, Block-SW(H). South Avenue Tower, Gulshan -01, Dhaka-1212. 
+                        Kushtia-7000, Khulna, Bangladesh. 
                         </span>
                     </p>
 
@@ -36,7 +36,7 @@ const Contact = () => {
             </div>
 
             <div className="mt-8 lg:w-1/2 lg:mx-6">
-                <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-transparent shadow-2xl rounded-xl dark:bg-gray-900 lg:max-w-xl">
+                <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-red-50  rounded-xl dark:bg-gray-900 lg:max-w-xl">
                     <h1 className="text-xl font-medium text-gray-700 dark:text-gray-200">Contact form</h1>
 
                     <form className="mt-4">
