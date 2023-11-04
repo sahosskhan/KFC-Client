@@ -1,7 +1,14 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../Firebase/AuthProvider";
 
 
 const Navbar = () => {
+  const { user, LogOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    LogOut();
+  };
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -37,7 +44,11 @@ const Navbar = () => {
   <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-          <img src="https://i.ibb.co/HDJMNSK/user.png" />
+        {user ? (
+                    <img src={user.photoURL} />
+                  ) : (
+                    <img src="https://i.ibb.co/HDJMNSK/user.png" alt="" />
+                  )}
         </div>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -46,8 +57,8 @@ const Navbar = () => {
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Ordered Food</a></li>
       </ul>
     </div>
-    <NavLink to='/login'>
-    <a className="btn bg-red-500 w-28 text-black text-xl mr-5">Login</a> </NavLink>
+   {user?( <button  onClick={handleSignOut} className="btn bg-red-500 w-28 text-black text-xl mr-5">Logout</button> ):(<NavLink to='/login'>
+    <button className="btn bg-red-500 w-28 text-black text-xl mr-5">Login</button> </NavLink> )}
   </div>
 </div>
         </div>
