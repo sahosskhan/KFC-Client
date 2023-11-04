@@ -46,7 +46,8 @@ const Navbar = () => {
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Ordered Food</a></li>
       </ul>
     </div>
-    <a className="btn bg-red-500 w-28 text-black text-xl mr-5">Login</a>
+    <NavLink to='/login'>
+    <a className="btn bg-red-500 w-28 text-black text-xl mr-5">Login</a> </NavLink>
   </div>
 </div>
         </div>
