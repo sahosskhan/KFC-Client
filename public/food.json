@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Pizza",
+      "image": "https://i.ibb.co/v3b91Qt/56933159.webp",
+      "category": "Italian",
+      "quantity": 10,
+      "price": 99,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 10,
+      "origin": "Italy",
+      "details": "Delicious pizza topped with tomato sauce, cheese, and your choice of toppings. Baked to perfection in a wood-fired oven."
+    },
+    {
+      "name": "Burger",
+      "image": "https://i.ibb.co/TqM0P7g/54660979.gif",
+      "category": "American",
+      "quantity": 5,
+      "price": 80,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 9,
+      "origin": "United States",
+      "details": "Classic beef patty, lettuce, tomato, cheese, and special sauce in a soft bun. Served with crispy fries."
+    },
+    {
+      "name": "Taco",
+      "image": "https://i.ibb.co/rfVvwRj/Taco.webp",
+      "category": "Mexican",
+      "quantity": 4,
+      "price": 45,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 6,
+      "origin": "Mexico",
+      "details": "Soft corn tortillas filled with seasoned ground beef, lettuce, cheese, and salsa. A taste of Mexico in every bite."
+    },
+    {
+      "name": "Pad Thai",
+      "image": "https://i.ibb.co/kqX34Kw/Pad-Thai.webp",
+      "category": "Thai",
+      "quantity": 3,
+      "price": 70,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 2,
+      "origin": "Thailand",
+      "details": "Stir-fried rice noodles with shrimp, tofu, peanuts, and tamarind sauce. A harmonious blend of sweet, sour, and spicy flavors."
+    },
+    {
+      "name": "Pasta",
+      "image": "https://i.ibb.co/gyM06xj/Pasta.webp",
+      "category": "Italian",
+      "quantity": 7,
+      "price": 70,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 6,
+      "origin": "Italy",
+      "details": "Al dente pasta served with a rich and creamy Alfredo sauce, garnished with parmesan cheese and parsley."
+    },
+    {
+      "name": "Ramen",
+      "image": "https://i.ibb.co/1nBzJdK/Ramen.webp",
+      "category": "Japanese",
+      "quantity": 6,
+      "price": 55,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 3,
+      "origin": "Japan",
+      "details": "Steaming bowl of ramen with tender slices of pork, boiled egg, and savory broth. A hearty and comforting dish."
+    },
+    {
+      "name": "Curry",
+      "image": "https://i.ibb.co/18Lnf5n/Curry.gif",
+      "category": "Indian",
+      "quantity": 7,
+      "price": 60,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 2,
+      "origin": "India",
+      "details": "Spicy and aromatic curry with tender chicken, served with naan bread and rice. A taste of India on your plate."
+    },
+    {
+      "name": "Tiramisu",
+      "image": "https://i.ibb.co/fqM5nrQ/Tiramisu.gif",
+      "category": "Italian",
+      "quantity": 4,
+      "price": 40,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 3,
+      "origin": "Italy",
+      "details": "A classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese, dusted with cocoa powder."
+    },
+    {
+      "name": "Sushi Rolls",
+      "image": "https://i.ibb.co/nPj7JNZ/Sushi-Rolls.webp",
+      "category": "Japanese",
+      "quantity": 9,
+      "price": 80,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 4,
+      "origin": "Japan",
+      "details": "Exquisite sushi rolls featuring a variety of fish and seafood, expertly crafted by our sushi chef."
+    },
+    {
+      "name": "Lobster Bisque",
+      "image": "https://i.ibb.co/C2bmpR8/Lobster-Bisque.webp",
+      "category": "French",
+      "quantity": 11,
+      "price": 90,
+      "user": "Sahosskhan",
+      "email": "sahoss@example.com",
+      "order": 5,
+      "origin": "France",
+      "details": "Creamy and indulgent lobster bisque, made with fresh lobster meat, brandy, and a touch of cream. Served with crusty bread."
+    }
+  ]
+  

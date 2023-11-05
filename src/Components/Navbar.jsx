@@ -21,7 +21,9 @@ const Navbar = () => {
       <NavLink to="/">
       <li className="hover:bg-red-500 rounded-xl" ><a>Home</a></li>
       </NavLink>
+      <NavLink to="/allfooditems"> 
       <li className="hover:bg-red-500 rounded-xl"><a>All Food</a></li>
+      </NavLink>
       <NavLink to="/blog">
       <li className="hover:bg-red-500 rounded-xl"><a>Blog</a></li>
       </NavLink>
@@ -34,7 +36,9 @@ const Navbar = () => {
     <NavLink to="/">
       <li className="hover:bg-red-500 rounded-xl" ><a>Home</a></li>
       </NavLink>
+      <NavLink to="/allfooditems">
       <li className="hover:bg-red-500 rounded-xl"><a>All Food</a></li>
+      </NavLink>
       <NavLink to="/blog">
       <li className="hover:bg-red-500 rounded-xl"><a>Blog</a></li>
       </NavLink>
