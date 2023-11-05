@@ -8,6 +8,7 @@ import Register from "../Pages/Register";
 import ViewFetureFood from "../Components/ViewFetureFood";
 import AllFood from "../Pages/AllFood";
 import SingleFoodPage from "../Components/SingleFoodPage";
+import AddFood from "../Pages/AddFood";
 
 
 const router = createBrowserRouter([
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>,
+      },
+      {
+        path: "/addfood",
+        element: <AddFood></AddFood>,
       },
       {
         path: "/login",

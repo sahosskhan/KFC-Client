@@ -73,8 +73,11 @@ const Navbar = () => {
                       )}
                     </div>
                   </a>
+                 
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Added Food</a></li>
+        <NavLink to="/addfood">
         <li className="hover:bg-red-500 rounded-xl font-bold  text-3xl"><a>Add Food</a></li>
+        </NavLink>
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Ordered Food</a></li>
       </ul>
     </div>

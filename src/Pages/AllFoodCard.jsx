@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // eslint-disable-next-line react/prop-types
 const AllFoodCard = ({items}) => {
     const {_id, name, image,category,price } = items || {};
+    console.log(image);
     return (
         <div>
                         <div className="card w-96 bg-base-100 shadow-xl">
