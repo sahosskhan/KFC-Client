@@ -13,6 +13,7 @@ import MyaddedFood from './../Pages/MyaddedFood';
 import PrivateRoute from './PrivateRoute';
 
 import OrderingPage from './../Pages/OrderingPage';
+import MyCart from "../Pages/MyCart";
 
 
 const router = createBrowserRouter([
@@ -55,14 +56,21 @@ const router = createBrowserRouter([
 
       {
         path: "/singleordering/:id",
-        element: <OrderingPage></OrderingPage>,
+        element:<PrivateRoute> <OrderingPage></OrderingPage></PrivateRoute>,
         loader: ({params}) =>
         fetch(
           `http://localhost:5000/allsinglefood/${params?.id}`
         ),
       },
 
-
+      {
+        path: "/mycart",
+        element: (
+          <PrivateRoute>
+            <MyCart></MyCart>
+          </PrivateRoute>
+        ),
+      },
 
       {
         path: "/blog",

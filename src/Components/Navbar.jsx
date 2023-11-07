@@ -79,7 +79,9 @@ const Navbar = () => {
         <NavLink to="/addfood">
         <li className="hover:bg-red-500 rounded-xl font-bold  text-3xl"><a>Add Food</a></li>
         </NavLink>
+        <NavLink to="/mycart">
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Ordered Food</a></li>
+        </NavLink>
       </ul>
     </div>
    {user?( <button  onClick={handleSignOut} className="btn bg-red-500 w-28 text-black text-xl border-none mr-5">Logout</button> ):(<NavLink to='/login'>
