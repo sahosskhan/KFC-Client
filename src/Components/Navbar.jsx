@@ -11,7 +11,7 @@ const Navbar = () => {
   };
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-red-300 ">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -73,16 +73,17 @@ const Navbar = () => {
                       )}
                     </div>
                   </a>
-                 
+                 <NavLink to='/myaddedfood'>
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Added Food</a></li>
+        </NavLink>
         <NavLink to="/addfood">
         <li className="hover:bg-red-500 rounded-xl font-bold  text-3xl"><a>Add Food</a></li>
         </NavLink>
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Ordered Food</a></li>
       </ul>
     </div>
-   {user?( <button  onClick={handleSignOut} className="btn bg-red-500 w-28 text-black text-xl mr-5">Logout</button> ):(<NavLink to='/login'>
-    <button className="btn bg-red-500 w-28 text-black text-xl mr-5">Login</button> </NavLink> )}
+   {user?( <button  onClick={handleSignOut} className="btn bg-red-500 w-28 text-black text-xl border-none mr-5">Logout</button> ):(<NavLink to='/login'>
+    <button className="btn border-none bg-red-500 w-28 text-black text-xl mr-5">Login</button> </NavLink> )}
   </div>
 </div>
         </div>

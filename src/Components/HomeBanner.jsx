@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const HomeBanner = () => {
@@ -9,8 +10,10 @@ const HomeBanner = () => {
     <div className="max-w-5xl">
       <h1 className="mb-5 text-5xl font-bold">Welcome To, Kentucky Fried Chicken</h1>
       <p className="mb-5 text-xl">KFC Corporation, doing business as Kentucky Fried Chicken, is an American fast food restaurant chain headquartered in Louisville, Kentucky, that specializes in fried chicken.</p>
-      <button className="btn bg-red-600 border-none text-black">Get Started</button>
-    </div>
+      <Link to="/allfooditems">
+      <button className="btn bg-red-600 border-none text-white hover:bg-black">Explore Our Food</button>
+      </Link>    
+      </div>
   </div>
 </div>
         </div>

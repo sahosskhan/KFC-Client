@@ -13,7 +13,7 @@ const Featurefood = ({ items }) => {
   <p className=" text-xl absolute ml-[279px] p-2 mt-[244px] rounded-l-xl border-none text-black bg-green-500"><i className="fa-solid fa-dollar-sign "></i>  {price} USD</p>
   <h2 className="text-center text-2xl font-semibold rounded-xl rounded-t-none text-black bg-amber-400 p-2 w-full">{name}</h2>
   <div className="card-body">
-    <Link to={`/limitedFoodDetails/${_id}`}>
+    <Link  to={`/singlefooditmes/${_id}`}>
   <button className="btn btn-block bg-red-500 text-black">See Details</button>
     
   </Link>

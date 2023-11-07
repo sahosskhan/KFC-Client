@@ -35,7 +35,7 @@ const AddFood = () => {
 
 
     fetch(
-      "http://localhost:5000/allfood",
+      "http://localhost:5000/allfoods",
       {
         method: "POST",
         headers: {

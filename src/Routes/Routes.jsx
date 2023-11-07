@@ -5,10 +5,14 @@ import Home from "../Pages/Home";
 import Blog from "../Pages/Blog";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
-import ViewFetureFood from "../Components/ViewFetureFood";
+
 import AllFood from "../Pages/AllFood";
 import SingleFoodPage from "../Components/SingleFoodPage";
 import AddFood from "../Pages/AddFood";
+import MyaddedFood from './../Pages/MyaddedFood';
+import PrivateRoute from './PrivateRoute';
+
+import OrderingPage from './../Pages/OrderingPage';
 
 
 const router = createBrowserRouter([
@@ -28,19 +32,18 @@ const router = createBrowserRouter([
       {
         path: "/allfooditems",
         element: <AllFood></AllFood>,
-        loader: () =>
-        fetch(
-          "http://localhost:5000/allfood"
-        ),
       },
       {
-        path: "/limitedFoodDetails/:id",
-        element: <ViewFetureFood></ViewFetureFood>,
-        loader: ({params}) =>
+        path: "/myaddedfood",
+        element:<PrivateRoute> <MyaddedFood></MyaddedFood></PrivateRoute>,
+        loader: () =>
         fetch(
-          `http://localhost:5000/foodsingle/${params?.id}`
+          "http://localhost:5000/myaddfood"
         ),
       },
+
+   
+
       {
         path: "/singlefooditmes/:id",
         element: <SingleFoodPage></SingleFoodPage>,
@@ -49,13 +52,25 @@ const router = createBrowserRouter([
           `http://localhost:5000/allsinglefood/${params?.id}`
         ),
       },
+
+      {
+        path: "/singleordering/:id",
+        element: <OrderingPage></OrderingPage>,
+        loader: ({params}) =>
+        fetch(
+          `http://localhost:5000/allsinglefood/${params?.id}`
+        ),
+      },
+
+
+
       {
         path: "/blog",
         element: <Blog></Blog>,
       },
       {
         path: "/addfood",
-        element: <AddFood></AddFood>,
+        element: <PrivateRoute> <AddFood></AddFood> </PrivateRoute>,
       },
       {
         path: "/login",
