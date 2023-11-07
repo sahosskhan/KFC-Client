@@ -9,7 +9,7 @@ const AllFoodCard = ({items}) => {
   <figure><img src={image} alt="Shoes" /></figure>
 
   <h1 className="bg-red-500 absolute text-center p-2 w-36 text-black rounded-r-xl text-xl font-bold">{category}</h1>
-  <p className=" text-xl absolute w-36 ml-[239px] p-2 mt-[244px] rounded-l-xl border-none text-black bg-green-500"><i className="fa-solid fa-dollar-sign "></i>  {price} USD</p>
+  <p className=" text-xl absolute w-36 ml-[240px] p-2 mt-[244px] rounded-l-xl border-none text-black bg-green-500"><i className="fa-solid fa-dollar-sign "></i>  {price} USD</p>
   <h2 className="text-center text-2xl font-semibold rounded-xl rounded-t-none text-black bg-amber-400 p-2 w-full">{name}</h2>
   <div className="card-body">
     <Link to={`/singlefooditmes/${_id}`}>

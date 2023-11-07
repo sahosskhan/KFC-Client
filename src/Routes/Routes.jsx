@@ -14,6 +14,7 @@ import PrivateRoute from './PrivateRoute';
 
 import OrderingPage from './../Pages/OrderingPage';
 import MyCart from "../Pages/MyCart";
+import UpdateFood from "../Pages/UpdateFood";
 
 
 const router = createBrowserRouter([
@@ -63,6 +64,14 @@ const router = createBrowserRouter([
         ),
       },
 
+      {
+        path: "/myupdatefood/:id",
+        element:<PrivateRoute> <UpdateFood></UpdateFood></PrivateRoute>,
+        loader: ({params}) =>
+        fetch(
+          `http://localhost:5000/update/${params?.id}`
+        ),
+      },
       {
         path: "/mycart",
         element: (
