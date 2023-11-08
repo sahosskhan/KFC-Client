@@ -14,7 +14,7 @@ const Blog = () => {
 		</div>
 		<div className="mt-3">
 			<a rel="noopener noreferrer" href="#" className="text-2xl font-bold hover:underline">What is One way data binding?</a>
-			<p className="mt-2">One-way data binding is a concept commonly used in web development and user interface frameworks to describe how data is synchronized between the applications data model and the user interface elements. In one-way data binding, data flows in one direction, typically from the data model to the UI, and any changes in the data model are reflected in the UI automatically.</p>
+			<p className="mt-2">One-way data binding is a data binding method that data flows from a model to a view. This means that view can only be updated when  model changes & model cannot be updated by changes made to view. One-way data binding is commonly used in UI development, web development, DBMS etc</p>
 		</div>
 	</div>
 </div>
@@ -29,7 +29,7 @@ const Blog = () => {
 		</div>
 		<div className="mt-3">
 			<a rel="noopener noreferrer" href="#" className="text-2xl font-bold hover:underline">What is NPM in node.js?</a>
-			<p className="mt-2">NPM stands for Node Package Manager, and it is the default package manager for Node.js. NPM is a command-line tool and an online registry of JavaScript packages and libraries that are open-source and available for use in Node.js applications. NPM simplifies the process of managing, installing, and sharing JavaScript code, making it an essential tool for Node.js developers.</p>
+			<p className="mt-2">NPM = Node Package Manager. NPM is the default package manager for Node.js. its help to install or uninstall any package for project and manage the server running and localhost deploy.  </p>
 		</div>
 	</div>
 </div>
@@ -44,40 +44,14 @@ const Blog = () => {
 		</div>
 		<div className="mt-3">
 			<a rel="noopener noreferrer" href="#" className="text-2xl font-bold hover:underline">Different between Mongodb database vs mySQL database.</a>
-			<p className="mt-2">
-<div className="bg-red-100 p-10 text-lg rounded-xl">
-<b>Data Model:</b>
-<li>MongoDB is a NoSQL database, which means it uses a flexible, schema-less data model. Data is stored in JSON-like documents, which can have different structures within the same collection. This allows for easy scaling and handling of unstructured or semi-structured data.</li>
-<li>MySQL is a relational database, which uses a structured, tabular data model with fixed schemas. Data is organized into tables with predefined columns and data types. This structure is suitable for data that fits well into tables with rows and columns.</li>
-</div>
-<div className="bg-red-100 p-10 text-lg rounded-xl mt-5">
-<b>Query Language:</b>
+			<p className="mt-2">MongoDB is a NoSQL database & MySQL is a relational database. 
+			<br/>
+			MongoDB uses a query language that is designed to work with JSON & MySQL uses SQL, which is a powerful language for querying structured data in a tabular format. 
+			<br/>
+			MongoDB is generally considered to be eventually consistent by default & MySQL, especially when using the InnoDB storage engine.
+			<br/> 
+			MongoDB is often chosen for applications where flexibility, scalability, and handling of unstructured or semi-structured data is important & MySQL is well-suited for applications that require structured data, complex transactions, and strong consistency.  </p>
 
-<li>MongoDB uses a query language that is designed to work with JSON-like documents. It supports rich queries, including nested documents and arrays.</li>
-<li>MySQL uses SQL (Structured Query Language), which is a powerful language for querying structured data in a tabular format.
-</li>
-</div>
-
-<div className="bg-red-100 p-10 text-lg rounded-xl mt-5">
-<b>Scaling:</b>
-<li>MongoDB is designed to scale horizontally, which means you can add more servers or nodes to handle increased data and traffic. This makes it well-suited for large-scale applications and big data scenarios.</li>
-<li>MySQL can also scale horizontally to some extent, but it is typically associated with vertical scaling, where you add more resources (CPU, RAM) to a single server. Horizontal scaling in MySQL usually involves more complex configurations like sharding.
-ACID </li>
-</div>
-
-<div className="bg-red-100 p-10 text-lg rounded-xl mt-5">
-<b>Compliance:</b>
-<li>MongoDB is generally considered to be eventually consistent by default. It offers strong consistency, but you can choose to configure it to be more flexible if needed.</li>
-<li>MySQL, especially when using the InnoDB storage engine, is known for its strong ACID (Atomicity, Consistency, Isolation, Durability) compliance, which is essential for applications that require strict data consistency and transaction support.</li>
-</div>
-
-<div className="bg-red-100 p-10 text-lg rounded-xl mt-5">
-<b>Use Cases:</b>
-
-<li>MongoDB is often chosen for applications where flexibility, scalability, and handling of unstructured or semi-structured data is important. It is commonly used in web and mobile applications, content management systems, and analytics platforms.</li>
-<li>MySQL is well-suited for applications that require structured data, complex transactions, and strong consistency. It is widely used in traditional relational database scenarios, such as e-commerce, finance, and accounting systems.</li>
-</div>
-</p>
 		</div>
 	</div>
 </div>

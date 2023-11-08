@@ -6,7 +6,9 @@ const Featurefood = ({ items }) => {
     const {_id, name, image,category,price } = items || {};
     return (
         <div>
-            <motion.div   className="card w-96 bg-red-100 shadow-xl">
+            <motion.div initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}   className="card w-96 bg-red-100 shadow-xl">
   <figure><img src={image} alt="Shoes" /></figure>
 
   <h1 className="bg-red-500 absolute text-center p-2 w-36 text-black rounded-r-xl text-xl font-bold">{category}</h1>

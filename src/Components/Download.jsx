@@ -1,9 +1,12 @@
 
+import { motion } from 'framer-motion';
 
 const Download = () => {
     return (
         <div>
-            <div className="lg:mx-0 md:mx-0 mx-10">
+            <motion.div initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }} className="lg:mx-0 md:mx-0 mx-10">
       <section className="bg-white dark:bg-gray-900">
         <div className="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
           <div className="flex justify-center xl:w-1/2">
@@ -30,15 +33,12 @@ const Download = () => {
                 <i className="fa-brands fa-app-store-ios"></i> IOS
               </button>
 
-              <button className="btn border-none bg-red-300 lg:text-lg hover:bg-red-300">
-                <i className="fa-brands fa-windows"></i> Windows
-              </button>
               
             </div>
           </div>
         </div>
       </section>
-    </div>    
+    </motion.div>    
         </div>
     );
 };

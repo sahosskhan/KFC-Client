@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 
 const HomeBanner = () => {
     return (
-        <div>
+        <motion.div initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1.5 }}>
 <div className="hero h-[700px]" style={{backgroundImage: 'url(https://kfcbd.com/storage/sliders/IjPaVNTczArizOo2jClLPvJxo.jpg)'}}>
   <div className="hero-overlay bg-opacity-80"></div>
   <div className="hero-content text-center text-neutral-content">
@@ -16,7 +19,7 @@ const HomeBanner = () => {
       </div>
   </div>
 </div>
-        </div>
+        </motion.div>
     );
 };
 

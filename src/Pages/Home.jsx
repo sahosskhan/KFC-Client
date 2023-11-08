@@ -4,6 +4,7 @@ import HomeBanner from "../Components/HomeBanner";
 import Featurefood from "../Components/Featurefood";
 import Download from "../Components/Download";
 import { Helmet } from "react-helmet-async";
+import Team from "../Components/Team";
 
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
      </div>
         <Accordion></Accordion>
     <Download/>
+    <Team/>
         </div>
     );
 };

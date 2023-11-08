@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 
 // eslint-disable-next-line react/prop-types
@@ -6,7 +7,9 @@ const AddedFood = ({food}) => {
     const {_id, name, image, price } = food || {};
     return (
         <div>
-    <div className="flex rounded-xl flex-col items-center justify-center w-full max-w-sm mx-auto">
+    <motion.div initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }} className="flex rounded-xl flex-col items-center justify-center w-full max-w-sm mx-auto">
         <div
           className="w-full h-[500px]  bg-gray-300 bg-center bg-cover rounded-xl shadow-md"
           style={{
@@ -36,7 +39,7 @@ const AddedFood = ({food}) => {
           </button>
           </Link>
         </div>
-      </div>
+      </motion.div>
         </div>
     );
 };

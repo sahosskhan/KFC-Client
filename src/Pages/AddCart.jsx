@@ -1,4 +1,5 @@
 
+import { motion } from 'framer-motion';
 
 // eslint-disable-next-line react/prop-types
 const AddCart = ({items, handleDelete}) => {
@@ -7,7 +8,9 @@ const AddCart = ({items, handleDelete}) => {
 
     return (
         <div>
-             <div className="flex rounded-xl flex-col items-center justify-center w-full max-w-sm mx-auto">
+             <motion.div initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }} className="flex rounded-xl flex-col items-center justify-center w-full max-w-sm mx-auto">
         <div
           className="w-full h-[500px]  bg-gray-300 bg-center bg-cover rounded-xl shadow-md"
           style={{
@@ -38,7 +41,7 @@ const AddCart = ({items, handleDelete}) => {
           
         </div>
         <h1 className="text-base text-black font-bold   text-center my-2 bg-red-400 rounded-xl p-2 ">Order Owner: {buyName}</h1>
-      </div>   
+      </motion.div>   
         </div>
     );
 };

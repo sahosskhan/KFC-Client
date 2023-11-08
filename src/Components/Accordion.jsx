@@ -1,8 +1,11 @@
 
+import { motion } from 'framer-motion';
 
 const Accordion = () => {
 	return (
-		<div>
+		<motion.div initial={{ opacity: 0 }}
+		whileInView={{ opacity: 1 }}
+		transition={{ duration: 1.5 }}>
 		<section className="dark:bg-gray-800 dark:text-gray-100">
 	<div className="container flex flex-col justify-center px-4 py-8 mx-auto md:p-8">
 		<h2 className="text-2xl text-center font-semibold sm:text-4xl">Frequently Asked Questions</h2>
@@ -31,7 +34,7 @@ const Accordion = () => {
 		</div>
 	</div>
 </section>	
-		</div>
+		</motion.div>
 	);
 };
 
