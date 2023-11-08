@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useLoaderData } from "react-router-dom";
 
 const SingleFoodPage = () => {
@@ -6,6 +7,9 @@ const SingleFoodPage = () => {
     console.log(items);
     return (
         <div>
+           <Helmet>
+    <title>KFC | Single Food Page</title>
+  </Helmet>
                         <div className="card my-20 mx-auto w-[700px] h-[800px] bg-red-50">
   <figure><img  src={image} alt="Shoes" /></figure>
 

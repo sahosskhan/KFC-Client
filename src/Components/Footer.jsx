@@ -29,8 +29,8 @@ const Footer = () => {
     <a className="link text-lg link-hover">Adds policy</a> 
     <a className="link text-lg link-hover">Jobs policy</a>
   </nav>
-  <nav>
-    <header className="footer-title text-lg">Social</header> 
+  <nav className=" md:hidden">
+    <header className="footer-title text-lg  ">Social</header> 
     <div className="grid grid-flow-col gap-4">
       <a><i className="text-4xl fa-brands fa-facebook"></i></a> 
       <a><i className="text-4xl fa-brands fa-square-instagram"></i></a> 

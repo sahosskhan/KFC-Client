@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         element: <Home></Home>,
         loader: () =>
         fetch(
-          "http://localhost:5000/allfood/limited"
+          "https://a11-ph-server.vercel.app/allfoods/limited"
         ),
       },
       {
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute> <MyaddedFood></MyaddedFood></PrivateRoute>,
         loader: () =>
         fetch(
-          "http://localhost:5000/myaddfood"
+          "https://a11-ph-server.vercel.app/myaddfood"
         ),
       },
 
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
         element: <SingleFoodPage></SingleFoodPage>,
         loader: ({params}) =>
         fetch(
-          `http://localhost:5000/allsinglefood/${params?.id}`
+          `https://a11-ph-server.vercel.app/allsinglefood/${params?.id}`
         ),
       },
 
@@ -60,7 +60,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute> <OrderingPage></OrderingPage></PrivateRoute>,
         loader: ({params}) =>
         fetch(
-          `http://localhost:5000/allsinglefood/${params?.id}`
+          `https://a11-ph-server.vercel.app/allsinglefood/${params?.id}`
         ),
       },
 
@@ -69,7 +69,7 @@ const router = createBrowserRouter([
         element:<PrivateRoute> <UpdateFood></UpdateFood></PrivateRoute>,
         loader: ({params}) =>
         fetch(
-          `http://localhost:5000/update/${params?.id}`
+          `https://a11-ph-server.vercel.app/update/${params?.id}`
         ),
       },
       {

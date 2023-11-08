@@ -2,12 +2,13 @@ import { useContext, useEffect, useState } from "react";
 import AddCart from "./AddCart";
 import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const MyCart = () => {
     const { user } = useContext(AuthContext);
 
-  const url = `http://localhost:5000/addCarts?email=${user.email}`;
+  const url = `https://a11-ph-server.vercel.app/addCarts?email=${user.email}`;
   const [add, setAdd] = useState([]);
   useEffect(() => {
     fetch(url)
@@ -28,7 +29,7 @@ const MyCart = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `http://localhost:5000/addCarts/${id}`,
+          `https://a11-ph-server.vercel.app/addCarts/${id}`,
           {
             method: "DELETE",
           }
@@ -52,9 +53,12 @@ const MyCart = () => {
 
     return (
         <div>
+           <Helmet>
+    <title>KFC | Food Cart</title>
+  </Helmet>
                <div className="">
       <h1 className="text-red-600 text-center font-black text-5xl">
-        Welcome! To Cart
+        Welcome! To Food Cart
       </h1>
 
       <div className=" lg:mb-[560px]  grid lg:grid-cols-3 grid-cols-1 gap-y-5 my-10 md:mx-40 lg:mx-64  ">

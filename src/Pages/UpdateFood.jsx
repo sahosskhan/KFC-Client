@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateFood = () => {
@@ -31,7 +32,7 @@ const UpdateFood = () => {
         { name, details, category, quantity, price, origin, user, email, image } || {};
       console.log(SingleFoodUpdate);
       fetch(
-        `http://localhost:5000/update/${_id}`,
+        `https://a11-ph-server.vercel.app/update/${_id}`,
         {
           method: "PUT",
           headers: {
@@ -64,6 +65,9 @@ const UpdateFood = () => {
     }
     return (
         <div>
+           <Helmet>
+    <title>KFC | Update Food</title>
+  </Helmet>
                  <div className="mt-8 container mx-auto">
         <div className="w-full px-8 py-10 mx-auto overflow-hidden bg-opacity-20 bg-white backdrop-blur-3xl border-none filter drop-shadow-md rounded-2xl p-2 lg:max-w-5xl shadow-gray-300/50 ">
           <h1 className="text-4xl font-bold text-center  text-red-700">

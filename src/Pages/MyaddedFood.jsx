@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Firebase/AuthProvider";
 import AddedFood from "./AddedFood";
+import { Helmet } from "react-helmet-async";
 
 const MyaddedFood = () => {
     const { user} = useContext(AuthContext);
@@ -11,6 +12,9 @@ const userFood = MyAddFood.filter(food =>food?.email === user.email) ;
 console.log(userFood);
 if(userFood?.length==0){
     return <div>
+         <Helmet>
+    <title>KFC | My Added Food</title>
+  </Helmet>
        <section className="bg-white dark:bg-gray-900 ">
     <div className="container flex items-center h-[554px] px-6 py-12 mx-auto">
         <div className="flex flex-col items-center max-w-sm mx-auto text-center">

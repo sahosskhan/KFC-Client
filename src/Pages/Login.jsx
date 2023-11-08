@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Firebase/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
     const { signIn, googleLogin, loading } = useContext(AuthContext);
@@ -63,6 +64,9 @@ const Login = () => {
 
     return (
         <div>
+           <Helmet>
+    <title>KFC | Login</title>
+  </Helmet>
             <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
     <div className="flex  justify-center mx-auto">
         <img className="w-auto h-14 " src="https://i.ibb.co/LdKJdhB/logo.png" alt=""/>

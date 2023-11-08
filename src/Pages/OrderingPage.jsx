@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../Firebase/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 
 const OrderingPage = () => {
@@ -28,7 +29,7 @@ const formattedDate = `${day}/${month}/${year}`;
       const card = { buyName, buyEmail, buyDate, name, image, category, price,quantity };
       console.log(card);
       fetch(
-        "http://localhost:5000/addCarts",
+        "https://a11-ph-server.vercel.app/addCarts",
         {
           method: "POST",
           headers: { "content-type": "application/json" },
@@ -55,6 +56,9 @@ const formattedDate = `${day}/${month}/${year}`;
 
     return (
         <div>
+           <Helmet>
+    <title>KFC | Make Order</title>
+  </Helmet>
                   <div className="max-w-lg mx-auto my-10 overflow-hidden bg-white rounded-lg shadow-md dark:bg-gray-800">
         <img className="h-[500px] w-full mx-auto" src={image} alt="Article" />
 

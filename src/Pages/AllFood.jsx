@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet-async";
 import AllFoodCard from "./AllFoodCard";
 import { useEffect, useRef, useState } from "react";
 
@@ -13,7 +14,7 @@ const searchRef = useRef(null);
 
   useEffect(() => {
     fetch(
-      `http://localhost:5000/allFoods?search=${search}`
+      `https://a11-ph-server.vercel.app/allFoods?search=${search}`
     )
       .then((res) => res.json())
       .then((data) => setData(data));
@@ -23,6 +24,9 @@ const searchRef = useRef(null);
     // console.log(AllFood);
     return (
         <div>
+           <Helmet>
+    <title>KFC | All Food</title>
+  </Helmet>
                <div className=" my-20 ">
 
 

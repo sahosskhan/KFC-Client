@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-
+import { motion } from "framer-motion"
 
 // eslint-disable-next-line react/prop-types
 const Featurefood = ({ items }) => {
     const {_id, name, image,category,price } = items || {};
     return (
         <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <motion.div   className="card w-96 bg-red-100 shadow-xl">
   <figure><img src={image} alt="Shoes" /></figure>
 
   <h1 className="bg-red-500 absolute text-center p-2 w-36 text-black rounded-r-xl text-xl font-bold">{category}</h1>
@@ -18,7 +18,7 @@ const Featurefood = ({ items }) => {
     
   </Link>
   </div>
-</div>
+</motion.div>
         </div>
     );
 };

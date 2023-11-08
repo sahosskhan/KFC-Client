@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Firebase/AuthProvider";
 import { updateProfile } from 'firebase/auth';
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -50,6 +51,9 @@ const Register = () => {
 
     return (
         <div>
+           <Helmet>
+    <title>KFC | Registration</title>
+  </Helmet>
                       <div className="w-full max-w-sm p-6 m-auto mx-auto bg-white rounded-lg shadow-md dark:bg-gray-800">
     <div className="flex  justify-center mx-auto">
         <img className="w-auto h-14 " src="https://i.ibb.co/LdKJdhB/logo.png" alt=""/>
