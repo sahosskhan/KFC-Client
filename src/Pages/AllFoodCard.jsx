@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 // eslint-disable-next-line react/prop-types
 const AllFoodCard = ({items}) => {
-    const {_id, name, image,category,price,} = items || {};
+    const {_id, name, image,category,price,quantity} = items || {};
     return (
         <div>
                         <motion.div initial={{ opacity: 0 }}
@@ -16,6 +16,8 @@ const AllFoodCard = ({items}) => {
 
   <h2 className="text-center text-2xl font-semibold rounded-xl rounded-t-none text-black bg-amber-400 p-2 w-full">{name}</h2>
   <div className="card-body">
+<h1 className="text-xl text-center font-bold mb-4"> <span className="text-red-500">{quantity}</span> Available</h1>
+
     <Link to={`/singlefooditmes/${_id}`}>
   <button className="btn btn-block bg-red-500 text-black">See Details</button>
     

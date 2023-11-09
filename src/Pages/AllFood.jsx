@@ -9,9 +9,6 @@ const AllFood = () => {
   const [data, setData] = useState({});
 const [page, setPage]= useState(1);
 
-console.log(data);
-
-
 const handlePrevPage = () => {
 if (page>0){
   setPage (page-1) 

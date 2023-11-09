@@ -45,32 +45,23 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-  <div className="dropdown dropdown-end">
+ {user &&  <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
         <div className="w-10 rounded-full">
-        {user ? (
                     <img src={user.photoURL} />
-                  ) : (
-                    <img src="https://i.ibb.co/HDJMNSK/user.png" alt="" />
-                  )}
         </div>
       </label>
       <ul tabIndex={0} className="menu bg-opacity-75 menu-sm dropdown-content mt-5 z-[1] p-2 shadow bg-base-100 rounded-box w-72">
 
       <a href="#" className="flex items-center p-3 -mt-2">
-                     {user ? (
+                     
                     <img className=" flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9" src={user.photoURL} />
-                  ) : (
-                    <img className=" hidden flex-shrink-0 object-cover mx-1 rounded-full w-9 h-9" src="" alt="" />
-                  )}
+                
                     <div className="mx-1">
-                      {user ? (
                         <h1 className="text-lg font-light dark:text-white text-black">
                           {user.displayName}
                         </h1>
-                      ) : (
-                        <h1 className="text-sm font-semibold dark:text-white text-black"></h1>
-                      )}
+                    
                     </div>
                   </a>
                  <NavLink to='/myaddedfood'>
@@ -83,7 +74,7 @@ const Navbar = () => {
         <li className="hover:bg-red-500 rounded-xl font-bold text-3xl"><a>Ordered Food</a></li>
         </NavLink>
       </ul>
-    </div>
+    </div>}
    {user?( <button  onClick={handleSignOut} className="btn bg-red-500 w-28 text-black text-xl border-none mr-5">Logout</button> ):(<NavLink to='/login'>
     <button className="btn border-none bg-red-500 w-28 text-black text-xl mr-5">Login</button> </NavLink> )}
   </div>

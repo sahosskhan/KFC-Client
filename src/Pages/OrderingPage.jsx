@@ -16,10 +16,10 @@ const formattedDate = `${day}/${month}/${year}`;
 
 
 
-  const { user } = useContext(AuthContext);
+
     const items = useLoaderData();
-    const { name, image,category,price,quantity  } = items || {};
-  
+    const { name, image,category,price,quantity,email  } = items || {};
+    const { user : loginUser } = useContext(AuthContext);
 
     const addCartHandle = (e) => {
       e.preventDefault();
@@ -38,7 +38,20 @@ const formattedDate = `${day}/${month}/${year}`;
           text: "You Cannot order more than available quantity",
           confirmButtonText: "Ok",
         });
-      } else {
+      } 
+      else if (email === loginUser.email) {
+        Swal.fire({
+          icon: "warning",
+          title: "Order Restriction",
+          text: "You cannot order your own added food.",
+          confirmButtonText: "OK",
+        });
+      } 
+      
+      
+      
+      
+      else {
         const card = {
           buyName,
           buyEmail,
@@ -90,7 +103,7 @@ const formattedDate = `${day}/${month}/${year}`;
           <div className="flex justify-center items-center gap-5">
 
 <p className="bg-red-500 p-2 text-xl text-black w-1/2 text-center rounded-xl">{category}</p>
-<p className="bg-red-500 p-2 text-xl text-black w-1/2 text-center rounded-xl">{price} USD </p>
+<p className="bg-red-500 p-2 text-xl text-black w-1/2 text-center rounded-xl"><i className="fa-solid fa-dollar-sign "></i> {price} USD </p>
 <p className="bg-red-500 p-2 text-xl text-black w-1/2 text-center rounded-xl">{quantity} Available </p>
 
           </div>
@@ -105,7 +118,7 @@ const formattedDate = `${day}/${month}/${year}`;
              disabled
                   id="LoggingEmailAddress"
                   name="buyName"
-                  defaultValue={user.displayName}
+                  defaultValue={loginUser.displayName}
                   className="block w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
                   type="text"
                 />
@@ -119,7 +132,7 @@ const formattedDate = `${day}/${month}/${year}`;
                 disabled
                   id="LoggingEmailAddress"
                   name="buyEmail"
-                  defaultValue={user.email}
+                  defaultValue={loginUser.email}
                   className="lock w-full px-4 py-2 text-gray-700 bg-white border rounded-lg dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300"
                   type="email"
                 />
